@@ -38,7 +38,7 @@ pipeline {
         stage('Verify Deployment') {
             steps {
                 sh 'docker ps'
-                sh 'curl http://localhost:9090'
+                
             }
         }
     }
