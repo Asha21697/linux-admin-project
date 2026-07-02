@@ -5,3 +5,12 @@ services:
     ports:
       - "8080:80"
     restart: always
+
+    volumes:
+      - ./website:/usr/share/nginx/html
+
+    networks:
+      - technova-network
+
+networks:
+  technova-network:
