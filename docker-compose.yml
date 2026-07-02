@@ -5,12 +5,28 @@ services:
     ports:
       - "8080:80"
     restart: always
-
     volumes:
       - ./website:/usr/share/nginx/html
-
     networks:
       - technova-network
 
+  jenkins:
+    build:
+      context: ./jenkins
+    container_name: jenkins
+    ports:
+      - "8081:8080"
+      - "50000:50000"
+    restart: always
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - technova-network
+volumes:
+  jenkins_home:
+    external: true
+
 networks:
   technova-network:
+
