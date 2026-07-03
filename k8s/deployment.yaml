@@ -19,8 +19,8 @@ spec:
     spec:
       containers:
       - name: technova
-        image: technova-cicd:latest
-        imagePullPolicy: Never
+        image: asha21697/technova-cicd:latest
+        imagePullPolicy: Always
 
         ports:
         - containerPort: 80
