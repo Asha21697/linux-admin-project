@@ -1,66 +1,132 @@
-# Linux Administrator Project - TechNova Solutions
+# 🚀 TechNova Solutions - Linux Administrator & DevOps Project
 
-## Project Overview
+## 📌 Project Overview
 
-This project demonstrates a complete CI/CD pipeline using:
+This project demonstrates a complete end-to-end CI/CD pipeline built using Linux, Git, GitHub, Docker, Docker Compose, Jenkins, Nginx, and Kubernetes.
 
-- Linux
-- Git & GitHub
+Whenever code is pushed to GitHub, Jenkins automatically triggers the pipeline, builds a Docker image, and deploys the updated application.
+
+---
+
+# 🏗 Architecture
+
+```
+Developer
+    │
+    ▼
+Git Push
+    │
+    ▼
+GitHub Repository
+    │
+    ▼
+GitHub Webhook
+    │
+    ▼
+ngrok Tunnel
+    │
+    ▼
+Jenkins Pipeline
+    │
+    ▼
+Docker Build
+    │
+    ▼
+Docker Container
+    │
+    ▼
+Nginx Website
+```
+
+---
+
+# 🛠 Technologies Used
+
+- Ubuntu Linux
+- Git
+- GitHub
+- Jenkins
 - Docker
 - Docker Compose
-- Jenkins
 - Nginx
 - GitHub Webhooks
 - ngrok
-- Kubernetes (YAML files included)
+- Kubernetes (Deployment & Service YAML)
 
 ---
 
-## Architecture
+# 📂 Project Structure
 
-Developer
-↓
-Git Push
-↓
-GitHub
-↓
-Webhook
-↓
-Jenkins
-↓
-Docker Build
-↓
-Docker Container
-↓
-Nginx Website
+```
+linux-admin-project/
+│
+├── Dockerfile
+├── docker-compose.yml
+├── Jenkinsfile
+├── README.md
+├── website/
+├── jenkins/
+├── k8s/
+├── scripts/
+├── logs/
+└── backup/
+```
 
 ---
 
-## Features
+# ⚙️ CI/CD Pipeline
 
-- Automatic build on Git Push
+- Push code to GitHub
+- GitHub Webhook triggers Jenkins
+- Jenkins clones the repository
+- Docker image is built
+- Old container is stopped
+- New container is deployed
+- Website is updated automatically
+
+---
+
+# ✨ Features
+
+- Automated CI/CD Pipeline
+- GitHub Webhook Integration
 - Dockerized Nginx Website
-- Jenkins Pipeline
 - Docker Compose
-- GitHub Webhooks
-- Persistent Jenkins Data
+- Jenkins Automation
+- Persistent Jenkins Volume
 - Kubernetes Deployment Files
+- Linux Administration
 
 ---
 
-## Tech Stack
+# 🌐 Local URLs
 
-- Ubuntu
-- Docker
-- Docker Compose
-- Jenkins
-- Git
-- GitHub
-- Nginx
-- Kubernetes
+Application
+
+http://localhost:8080
+
+Jenkins
+
+http://localhost:8081
+
+CI/CD Deployment
+
+http://localhost:9090
 
 ---
 
-## Developed By
+# 📚 Future Improvements
 
-Mahak
+- Docker Hub Integration
+- Kubernetes Deployment
+- Helm Charts
+- Prometheus Monitoring
+- Grafana Dashboard
+- AWS Deployment
+- Terraform Automation
+
+---
+
+# 👩‍💻 Developed By
+
+**Mahak**
